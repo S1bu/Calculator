@@ -8,74 +8,49 @@
     <link rel="stylesheet" href="./style/style.css">
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <title>Calculator</title>
 </head>
 <body>
-
- 
-    <br>
-    <!-- <div class="container ">
-        <input type="text" id="inputBox" value="0"/>
-        <button class="digitButton" onclick="digitBtnPressed(1)">1</button>
-        <button class="digitButton" onclick="digitBtnPressed(2)">2</button>
-        <button class="digitButton" onclick="digitBtnPressed(3)">3</button>
-        <button class="digitButton" onclick="digitBtnPressed(4)">4</button>
-        <button class="digitButton" onclick="digitBtnPressed(5)">5</button>
-        <button class="digitButton" onclick="digitBtnPressed(6)">6</button>
-        <button class="digitButton" onclick="digitBtnPressed(7)">7</button>
-        <button class="digitButton" onclick="digitBtnPressed(8)">8</button>
-        <button class="digitButton" onclick="digitBtnPressed(9)">9</button>
-        <button class="digitButton" onclick="digitBtnPressed(0)">0</button>
-    
-        <button class="operator" onclick="operatorBtnPressed('+')">+</button>
-        <button class="operator" onclick="operatorBtnPressed('-')">-</button>
-        <button class="operator" onclick="operatorBtnPressed('x')">x</button>
-        <button class="operator" onclick="operatorBtnPressed('/')">/</button>
-        <button class="equals" onclick="equalsBtnPressed()">=</button>
-        <button class="clear" onclick="btnACPressed()">AC</button>
-    </div> -->
-    <div class="container-fluid">
-        <div class="container text-center">
+        <div class="container-fluid text-center">
+            <!--  row 1-->
+                       <input type="text" class="right" id="input" placeholder="0"/>
             <!--  row 1-->
             <div class="row">
-               <div class="col col-12 text-end">
-                       <input type="text" id="inputBox" value="0"/>
-               </div>
-              </div>
-            <!--  row 1-->
-            <div class="row">
-              <div class="col" onclick="digitBtnPressed(7)">7</div>
-              <div class="col" onclick="digitBtnPressed(8)">8</div>
-              <div class="col" onclick="digitBtnPressed(9)">9</div>
-              <div class="col"  onclick="operatorBtnPressed('x')">x</div>
+              <div class="col" onclick="inputNumber(7)">7</div>
+              <div class="col" onclick="inputNumber(8)">8</div>
+              <div class="col" onclick="inputNumber(9)">9</div>
+              <div class="col navy"  onclick="inputNumber('*')">x</div>
             </div>
             <!-- row 2 -->
             <div class="row">
-                <div class="col" onclick="digitBtnPressed(4)">4</div>
-                <div class="col" onclick="digitBtnPressed(5)">5</div>
-                <div class="col" onclick="digitBtnPressed(6)">6</div>
-                <div class="col"  onclick="operatorBtnPressed('-')">-</div>
+                <div class="col" onclick="inputNumber(4)">4</div>
+                <div class="col" onclick="inputNumber(5)">5</div>
+                <div class="col" onclick="inputNumber(6)">6</div>
+                <div class="col navy" style="font-size: 30px;"  onclick="inputNumber('-')">-</div>
               </div>
                <!-- row 3 -->
             <div class="row">
-                <div class="col" onclick="digitBtnPressed(1)">1</div>
-                <div class="col" onclick="digitBtnPressed(2)">2</div>
-                <div class="col" onclick="digitBtnPressed(3)">3</div>
-                <div class="col"  onclick="operatorBtnPressed('+')">+</div>
+                <div class="col" onclick="inputNumber(1)">1</div>
+                <div class="col" onclick="inputNumber(2)">2</div>
+                <div class="col" onclick="inputNumber(3)">3</div>
+                <div class="col navy"  onclick="inputNumber('+')">+</div>
               </div>
                <!-- row 4 -->
             <div class="row">
-                <div class="col">0</div>
-                <div class="col">.</div>
-                <div class="col"  onclick="operatorBtnPressed('/')">/</div>
-                
+                <div class="col" onclick="inputNumber(0)">0</div>
+                <div class="col" onclick="remove()"><i class="bi bi-backspace-fill" style="font-size: 20px;"></i></div>
+                <div class="col navy"onclick="inputNumber('.')" >.</div>
+                <div class="col navy"  onclick="inputNumber('/')">/</div>  
               </div>
               <!-- row 5 -->
             <div class="row">
-              <div class="col col-12">=</div>
+              <div class="col col-6 navy clear" onclick="clearSum()">CLEAR</div>
+              <div class="col navy" onclick="evaluateSum()">=</div>
             </div>
           </div>
-    </div>
+ 
     <!-- js external link -->
     <script src="./script/code.js"></script>
 </body>
