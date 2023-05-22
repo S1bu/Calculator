@@ -1,6 +1,6 @@
 let sum = '';
 // displays number in the input box
-let result=document.getElementById("input");
+let result= document.getElementById("input");
 
 //Display the number in output id
 function inputNumber(number){
@@ -9,7 +9,7 @@ function inputNumber(number){
 
 // calculates input values
 function evaluateSum(){
-        result.value=eval(result.value)
+    result.value=eval(result.value).toFixed(2)
 }
 
 // delets everything
